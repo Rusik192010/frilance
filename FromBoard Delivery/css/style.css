@@ -185,12 +185,6 @@ button:disabled {
     height: 44px;
     background-color: #8B5CF6;
     border-radius: 4px;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    color: #fff;
-    font-style: bold;
-    font-family: "Ubuntu", sans-serif;
     border: none;
 }
 
@@ -204,6 +198,16 @@ button:disabled {
 
 .menu-b-item button:disabled {
     background-color: #DDD6FE;
+}
+
+.menu-b-item button a {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fff;
+    font-style: bold;
+    font-family: "Ubuntu", sans-serif;
+    text-decoration: none;
 }
 
 .menu-buter {
@@ -594,6 +598,7 @@ footer {
     font-weight: 700;
     color: #F9FAFB;
     line-height: 24px;
+    text-decoration: none;
 }
 
 .up-2-l:hover {

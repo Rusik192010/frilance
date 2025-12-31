@@ -2,6 +2,12 @@ const menuBtn = document.querySelector('.menu__btn');
 const menuClose = document.querySelector('.menu__close');
 const menuList = document.querySelector('.menu__list');
 const menuShadow = document.querySelector('.menu--close');
+const a = document.querySelectorAll('a').forEach(el => {
+    el.addEventListener('click', () => {
+        alert('Тестовая страница');
+        el = 0;
+    });
+});
 
 
 menuBtn.addEventListener('click', () => {
