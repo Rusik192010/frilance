@@ -1,0 +1,8 @@
+@use './variables';
+
+@mixin font($fonts, $fontw, $color, $lineh) {
+    font-size: $fonts;
+    font-weight: $fontw;
+    color: $color;
+    line-height: $lineh;
+}

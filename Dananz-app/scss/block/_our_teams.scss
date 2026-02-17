@@ -1,0 +1,83 @@
+@use '../mixins';
+@use '../variables';
+
+
+.-text {
+    margin-bottom: 57px !important;
+}
+
+.-texts {
+    gap: 24px !important;
+}
+
+._text {
+    margin-bottom: 79px !important;
+}
+
+.person__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+}
+
+.person__item {
+    position: relative;
+    background-color: variables.$blue;
+
+    &-block {
+        width: 258px;
+        position: absolute;
+        background-color: variables.$white;
+        left: 12px;
+        bottom: 12px;
+        padding: 18px 16px;
+
+        &__title {
+            @include mixins.font(24px, 600, variables.$grey, 1.4);
+        }
+
+        &__text {
+            @include mixins.font(16px, 400, variables.$light_grey, 1.6);
+        }
+    }
+}
+
+.top-sec-1,
+.our-sec-2 {
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1024px) {
+    .person__list {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .person__list {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .person__item {
+        width: 300px;
+    }
+}
+
+@media (max-width: 320px) {
+    .person__item {
+        height: 300px;
+        width: 200px;
+
+        &-img {
+            max-width: 200px;
+        }
+
+        &-block {
+            width: 158px;
+        }
+    }
+} 
+

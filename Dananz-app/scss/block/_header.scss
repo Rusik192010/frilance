@@ -1,0 +1,167 @@
+@use '../mixins';
+@use '../variables';
+
+.container {
+    padding: 0 120px;
+
+    .header__inner {
+        margin: 40px 0 97px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav {
+            display: block;
+
+            &__list {
+                width: 100%;
+                display: flex;
+                gap: 74px;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 714px;
+            }
+
+            &__link {
+                @include mixins.font(16px, 400, variables.$grey, 1.6);
+
+                &-active {
+                    font-weight: 600;
+                }
+            }
+
+            &__btn {
+                @include mixins.font(14px, 500, variables.$white, 1.5);
+                padding: 14px 32px;
+                background-color: variables.$blue;
+            }
+
+            &__menu {
+                align-items: center;
+                display: none;
+                justify-content: center;
+                border-top: 2px solid #000;
+                border-bottom: 2px solid #000;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                margin-bottom: 100px;
+                padding-bottom: 20px;
+            }
+        }
+
+        .button__menu {
+            display: none;
+            background-color: transparent;
+            border: none;
+
+            .menu {
+                width: 32px;
+            }
+        }
+
+        .close__menu {
+            display: none;
+            background-color: transparent;
+            border: none;
+
+            .menu__close {
+                width: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 90px;
+
+        .header__inner {
+            margin: 40px 0 97px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav {
+            &__list {
+                gap: 64px;
+            }
+
+            &__link {
+                @include mixins.font(16px, 400, variables.$grey, 1.6);
+
+                &-active {
+                    font-weight: 600;
+                }
+            }
+
+            &__btn {
+                @include mixins.font(14px, 500, variables.$white, 1.5);
+                padding: 14px 32px;
+                background-color: variables.$blue;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 50px;
+    }
+
+    .nav {
+        &__list {
+            gap: 16px !important;
+        }
+
+        &__link {
+            font-size: 14px;
+        }
+
+        &__btn {
+            padding: 10px 12px !important;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header__inner {
+        margin-bottom: 20px !important;
+    }
+
+    .button__menu {
+        display: block !important;
+    }
+
+    .nav {
+        display: none !important;
+    }
+
+    .nav__menu {
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        display: none;
+        margin-bottom: 100px;
+        padding-bottom: 20px;
+
+        &__list {
+            display: flex !important;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        &.menu__list--active {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+

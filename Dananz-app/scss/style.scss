@@ -1,0 +1,50 @@
+@use './block/header';
+@use './block/home';
+@use './block/about';
+@use './block/services';
+@use './block/our_teams';
+@use './block/contacts';
+@use './block/portfolio';
+@use './block/min-room';
+@use './block/footer';
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+    font-family: "Poppins", sans-serif;
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: none;
+    unicode-bidi: isolate;
+}
+
