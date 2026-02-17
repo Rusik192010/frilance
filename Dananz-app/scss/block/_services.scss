@@ -1,0 +1,87 @@
+@use '../mixins';
+@use '../variables';
+
+
+
+.contacts-sec-2 {
+    margin-bottom: 100px;
+}
+
+.sec-4-list {
+    margin-bottom: 103px;
+}
+
+.contacts {
+    &__list {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-block {
+            max-width: 334px;
+        }
+
+        &-title {
+            margin-bottom: 20px;
+            @include mixins.font(24px, 600, variables.$grey, 1.4);
+        }
+
+        &-text {
+            @include mixins.font(18px, 400, variables.$light_grey, 1.6);
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .contacts__item-img {
+        max-width: 490px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts__list {
+        gap: 40px;
+    }
+
+    .contacts__item {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+
+        &-img {
+            max-width: 100%;
+        }
+
+        &-block {
+            max-width: 100%;
+        }
+
+        &-title {
+            font-size: 34px;
+        }
+
+        &-text {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts__item {
+        &-title {
+            font-size: 18px;
+        }
+
+        &-text {
+            font-size: 14px;
+        }
+    }
+}
+
